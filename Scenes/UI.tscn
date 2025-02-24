@@ -1,25 +1,102 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1wre5ys1w4jx"]
+[gd_scene load_steps=6 format=3 uid="uid://d1wre5ys1w4jx"]
 
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_i3e2j"]
+[ext_resource type="Texture2D" uid="uid://buqn22d7yvteb" path="res://Sprites/UI/heart.png" id="2_yb7d2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m813d"]
+bg_color = Color(0.32079, 0.451585, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpyg2"]
+bg_color = Color(0.883485, 0.845027, 0.757671, 0.811765)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onff0"]
+bg_color = Color(0.78, 0.1222, 0.0624, 1)
 
 [node name="UI" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_i3e2j")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerInfoBox" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 61.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m813d")
+
+[node name="IconBox" type="Panel" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bpyg2")
+
+[node name="Icon" type="TextureRect" parent="PlayerInfoBox/IconBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_i3e2j")
+texture = ExtResource("2_yb7d2")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Health" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="healthBar" type="ProgressBar" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -43.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/fill = SubResource("StyleBoxFlat_onff0")
+value = 20.0
+show_percentage = false
+
+[node name="Health" type="Label" parent="PlayerInfoBox/healthBar"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Życie: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Bones" type="Label" parent="."]
-layout_mode = 0
-offset_top = 21.0
-offset_right = 76.0
-offset_bottom = 44.0
+[node name="Values" type="Node" parent="."]
+
+[node name="Bones" type="Label" parent="Values"]
+visible = false
+offset_left = 2.0
+offset_top = 26.0
+offset_right = 60.0
+offset_bottom = 49.0
 text = "Kosci: 0"
