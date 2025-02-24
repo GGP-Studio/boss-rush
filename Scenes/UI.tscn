@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1wre5ys1w4jx"]
+[gd_scene load_steps=8 format=3 uid="uid://d1wre5ys1w4jx"]
 
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_i3e2j"]
 [ext_resource type="Texture2D" uid="uid://buqn22d7yvteb" path="res://Sprites/UI/heart.png" id="2_yb7d2"]
 [ext_resource type="Texture2D" uid="uid://dy5mpbsjtrii8" path="res://Sprites/items/bone.webp" id="3_1t463"]
+[ext_resource type="FontFile" uid="uid://dlotmh1rb565u" path="res://Fonts/Minecraft.ttf" id="3_l506i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m813d"]
 bg_color = Color(0.32079, 0.451585, 1, 1)
@@ -88,6 +89,7 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_l506i")
 text = "0/100"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -137,6 +139,7 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_l506i")
 text = "Kosci: 0"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -915,6 +915,10 @@ shape = SubResource("WorldBoundaryShape2D_8xe26")
 position = Vector2(-11, -133)
 collision_mask = 2
 
+[node name="Bone4" parent="Items" instance=ExtResource("5_8su4a")]
+position = Vector2(87, -147)
+collision_mask = 2
+
 [node name="Bone2" parent="Items" instance=ExtResource("5_8su4a")]
 position = Vector2(251, -132)
 collision_mask = 2
@@ -923,7 +927,7 @@ collision_mask = 2
 position = Vector2(536, -72)
 collision_mask = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="_tutorial_" type="Label" parent="."]
 offset_left = 420.0
 offset_top = 166.0
 offset_right = 565.0
