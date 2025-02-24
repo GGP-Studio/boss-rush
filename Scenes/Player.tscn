@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://d13kbwbdigp61"]
+[gd_scene load_steps=28 format=3 uid="uid://d13kbwbdigp61"]
 
 [ext_resource type="Texture2D" uid="uid://c7m7avldj57xm" path="res://Sprites/Warrior_SheetnoEffect.png" id="1_mycgh"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_tvgks"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v50nf"]
 atlas = ExtResource("1_mycgh")
@@ -196,8 +197,10 @@ radius = 7.0
 height = 32.0
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 2
 collision_mask = 3
+script = ExtResource("1_tvgks")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -21)
