@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ey1vo2u0xibx"
-path="res://.godot/imported/Character.png-da55ba76dc431d8f0205100d97c24a1f.ctex"
+uid="uid://dykhntrubm81u"
+path="res://.godot/imported/Orc-shadow_attack02.png-c4b3f489c8a22421a8f27eae809f6d50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemap/Legacy_Adventure_Pack/Assets/Character.png"
-dest_files=["res://.godot/imported/Character.png-da55ba76dc431d8f0205100d97c24a1f.ctex"]
+source_file="res://Sprites/Enemies/Orc/Orc/Shadow sprites/Orc-shadow_attack02.png"
+dest_files=["res://.godot/imported/Orc-shadow_attack02.png-c4b3f489c8a22421a8f27eae809f6d50.ctex"]
 
 [params]
 

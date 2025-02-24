@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://dhawamr0wmri4"]
+[gd_scene load_steps=10 format=4 uid="uid://dhawamr0wmri4"]
 
 [ext_resource type="PackedScene" uid="uid://d13kbwbdigp61" path="res://Scenes/Player.tscn" id="1_sjd6h"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_bvcbl"]
-[ext_resource type="Texture2D" uid="uid://bljiqit4as73e" path="res://tilemap/Legacy_Adventure_Pack/Assets/Assets.png" id="3_pmmmb"]
+[ext_resource type="Texture2D" uid="uid://bljiqit4as73e" path="res://tilemap/Assets.png" id="3_pmmmb"]
+[ext_resource type="PackedScene" uid="uid://c04lrahelqg8t" path="res://Scenes/Enemy.tscn" id="4_3hehv"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_5y500"]
 tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 1, 1, 393216, 0, 65537, 196608, 1, 2, 196608, 0, 65538, 196608, 1)
@@ -165,6 +166,7 @@ texture = ExtResource("3_pmmmb")
 16:4/0/physics_layer_0/polygon_0/one_way = true
 17:4/0 = 0
 17:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:4/0/physics_layer_0/polygon_0/one_way = true
 18:4/0 = 0
 19:4/0 = 0
 0:5/0 = 0
@@ -182,6 +184,7 @@ texture = ExtResource("3_pmmmb")
 18:5/0 = 0
 19:5/0 = 0
 19:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:5/0/physics_layer_0/polygon_0/one_way = true
 20:5/0 = 0
 20:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:5/0/physics_layer_0/polygon_0/one_way = true
@@ -271,10 +274,13 @@ texture = ExtResource("3_pmmmb")
 6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:8/0 = 0
 7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:8/0/physics_layer_0/polygon_0/one_way = true
 8:8/0 = 0
 8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:8/0/physics_layer_0/polygon_0/one_way = true
 9:8/0 = 0
 9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:8/0/physics_layer_0/polygon_0/one_way = true
 10:8/0 = 0
 10:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:8/0 = 0
@@ -870,3 +876,6 @@ script = ExtResource("2_bvcbl")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1, -10)
 zoom = Vector2(4, 4)
+
+[node name="Enemy" parent="." instance=ExtResource("4_3hehv")]
+position = Vector2(706, 266)

@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://c04lrahelqg8t"]
+
+[ext_resource type="Texture2D" uid="uid://h66qq3qnspt0" path="res://Sprites/Enemies/Orc/Orc/Orc-Idle.png" id="1_ab2p6"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_sebww"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4rct"]
+atlas = ExtResource("1_ab2p6")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5jjo"]
+atlas = ExtResource("1_ab2p6")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w02b2"]
+atlas = ExtResource("1_ab2p6")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqfiv"]
+atlas = ExtResource("1_ab2p6")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_te6rq"]
+atlas = ExtResource("1_ab2p6")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr40j"]
+atlas = ExtResource("1_ab2p6")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hjla"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4rct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5jjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w02b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqfiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_te6rq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr40j")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yd8eo"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_sebww")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(1.98, 1.98)
+sprite_frames = SubResource("SpriteFrames_2hjla")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_yd8eo")

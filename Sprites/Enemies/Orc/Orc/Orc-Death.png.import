@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yi7q1ikvb8f2"
-path="res://.godot/imported/Assets.png-491f1e3dc3b0e61ba5d8c8ee62e0e271.ctex"
+uid="uid://bxttdj52ktwbl"
+path="res://.godot/imported/Orc-Death.png-62b11803ddb2f04463811396e73e85b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemap/Legacy_Adventure_Pack/Social/Assets.png"
-dest_files=["res://.godot/imported/Assets.png-491f1e3dc3b0e61ba5d8c8ee62e0e271.ctex"]
+source_file="res://Sprites/Enemies/Orc/Orc/Orc-Death.png"
+dest_files=["res://.godot/imported/Orc-Death.png-62b11803ddb2f04463811396e73e85b1.ctex"]
 
 [params]
 

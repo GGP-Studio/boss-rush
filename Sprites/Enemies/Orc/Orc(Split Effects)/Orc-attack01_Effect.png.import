@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oskd476e1sa7"
-path="res://.godot/imported/Test.png-6c0aee18c25bca54b2a089d4e58b33ad.ctex"
+uid="uid://chak7yv3ml8yq"
+path="res://.godot/imported/Orc-attack01_Effect.png-0bfdc181c30d193ed2fa9bd547ea6eb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemap/Legacy_Adventure_Pack/Social/Test.png"
-dest_files=["res://.godot/imported/Test.png-6c0aee18c25bca54b2a089d4e58b33ad.ctex"]
+source_file="res://Sprites/Enemies/Orc/Orc(Split Effects)/Orc-attack01_Effect.png"
+dest_files=["res://.godot/imported/Orc-attack01_Effect.png-0bfdc181c30d193ed2fa9bd547ea6eb3.ctex"]
 
 [params]
 
