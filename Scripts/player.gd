@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -300.0
 
 
 func _physics_process(delta: float) -> void:
-	var health = 100
+	var _health = 100
 	var state := $AnimatedSprite2D
 	# Add the gravity.
 	if not is_on_floor():
