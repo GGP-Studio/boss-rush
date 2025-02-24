@@ -23,7 +23,7 @@ func _on_timer_timeout() -> void:
 	
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("seppuku"):
-		take_damage(100)
+		take_damage(10)
 	
 	# Add the gravity.
 	if not is_on_floor():
