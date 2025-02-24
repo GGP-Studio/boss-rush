@@ -212,7 +212,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7xagk")
 }],
-"loop": false,
+"loop": true,
 "name": &"death",
 "speed": 10.0
 }, {
@@ -284,8 +284,6 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_tvgks")
 
-[node name="Timer" type="Timer" parent="."]
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -21)
 sprite_frames = SubResource("SpriteFrames_n46hy")
@@ -296,6 +294,3 @@ offset = Vector2(8.23, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -16)
 shape = SubResource("CapsuleShape2D_kbru0")
-
-[connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
