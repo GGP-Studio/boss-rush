@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 150.0
-const JUMP_VELOCITY = -300.0
-@onready var health = 100
+@export var SPEED = 150.0
+@export var JUMP_VELOCITY = -300.0
+@export var health = 100
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
 @onready var katana_damage_area: CollisionShape2D = $DamagAareas/KatanaDamageArea
