@@ -902,6 +902,7 @@ limit_smoothed = true
 
 [node name="Enemy" parent="." instance=ExtResource("4_3hehv")]
 position = Vector2(706, 266)
+item_scene = ExtResource("5_8su4a")
 
 [node name="Killzone" parent="." instance=ExtResource("6_yjfox")]
 position = Vector2(544, 346)

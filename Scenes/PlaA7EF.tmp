@@ -301,14 +301,13 @@ shape = SubResource("CapsuleShape2D_kbru0")
 
 [node name="DamagAareas" type="Area2D" parent="."]
 position = Vector2(19, -4)
-collision_layer = 0
+collision_layer = 2
 collision_mask = 4
 
 [node name="KatanaDamageArea" type="CollisionShape2D" parent="DamagAareas"]
 position = Vector2(2, -9)
 shape = SubResource("CircleShape2D_v11hy")
 
-[connection signal="ready" from="." to="." method="ready"]
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="DamagAareas" to="." method="_on_area_2d_body_entered"]

@@ -1,7 +1,24 @@
-[gd_scene load_steps=11 format=3 uid="uid://c04lrahelqg8t"]
+[gd_scene load_steps=16 format=3 uid="uid://c04lrahelqg8t"]
 
 [ext_resource type="Texture2D" uid="uid://h66qq3qnspt0" path="res://Sprites/Enemies/Orc/Orc/Orc-Idle.png" id="1_ab2p6"]
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_sebww"]
+[ext_resource type="Texture2D" uid="uid://bxttdj52ktwbl" path="res://Sprites/Enemies/Orc/Orc/Orc-Death.png" id="2_o2mmo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oakbr"]
+atlas = ExtResource("2_o2mmo")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5t7x"]
+atlas = ExtResource("2_o2mmo")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h51og"]
+atlas = ExtResource("2_o2mmo")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dntw3"]
+atlas = ExtResource("2_o2mmo")
+region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4rct"]
 atlas = ExtResource("1_ab2p6")
@@ -29,6 +46,23 @@ region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hjla"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oakbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5t7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h51og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dntw3")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x4rct")
@@ -64,7 +98,7 @@ script = ExtResource("1_sebww")
 position = Vector2(0, -14)
 scale = Vector2(1.98, 1.98)
 sprite_frames = SubResource("SpriteFrames_2hjla")
-animation = &"Idle"
+animation = &"Death"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
