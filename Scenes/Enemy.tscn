@@ -60,7 +60,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_dntw3")
 }],
 "loop": false,
-"name": &"Death",
+"name": &"death",
 "speed": 10.0
 }, {
 "frames": [{
@@ -83,7 +83,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_pr40j")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -98,10 +98,8 @@ script = ExtResource("1_sebww")
 position = Vector2(0, -14)
 scale = Vector2(1.98, 1.98)
 sprite_frames = SubResource("SpriteFrames_2hjla")
-animation = &"Death"
-autoplay = "Idle"
-frame = 3
-frame_progress = 1.0
+animation = &"idle"
+autoplay = "idle"
 
 [node name="RedTime" type="Timer" parent="AnimatedSprite2D"]
 
